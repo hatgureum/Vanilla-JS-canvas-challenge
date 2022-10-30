@@ -8,17 +8,8 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <input
-      class="line-width"
-      type="range"
-      min="1"
-      max="10"
-      value="5"
-      step="0.5"
-    />
-    <input class="colorset" type="color" />
-    <div>
+    <div class="colorOptions">
+      <input class="colorset" type="color" />
       <div
         class="colorOption"
         style="background-color: #1abc9c"
@@ -64,15 +55,39 @@
         style="background-color: #ecf0f1"
         data-color="#ecf0f1"
       ></div>
-      <div
-        class="colorOption"
-        style="background-color: #95a5a6"
-        data-color="#95a5a6"
-      ></div>
     </div>
-    <button class="fillMode">Fill</button>
-    <button class="strokeMode">Stroke</button>
-    <input type="file" accept="image/*" id="file" />
+    <canvas></canvas>
+    <div class="btns">
+      <span>Line width</span>
+      <input
+        class="line-width"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        step="0.5"
+      />
+      <button class="fillMode">Fill</button>
+      <button class="strokeMode">Stroke</button>
+      <button class="clear">Clear</button>
+      <label for="file"> Add Photo </label>
+      <input type="file" accept="image/*" id="file" />
+      <input type="text" placeholder="Add text" id="textInput" />
+      <button id="saveBtn">Save</button>
+      <span>Font size</span>
+      <input
+        class="font-size"
+        type="range"
+        min="12"
+        max="144"
+        value="48"
+        step="12"
+      />
+    </div>
     <script src="src/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/29233b525a.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
